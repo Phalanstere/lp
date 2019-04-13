@@ -100,11 +100,12 @@
     font-family: Oswald;
 
     grid-template-columns: 8% 42% 45% 5%;
-	grid-template-rows: 6vw auto 16px;
+	grid-template-rows: 6vw auto 1fr 16px;
 
     grid-template-areas:
         "pleft pheader pheader pright"
         "pleft pcontent pcontent pright"
+        "pleft adobe adobe pright"
         "pleft programbar programbar programbar"
 
 }
@@ -125,6 +126,25 @@
     padding-right: 16px;
     padding-top: 20%;
 }
+
+
+.SeminarPhilosophy-program-link {
+    grid-area: adobe;
+}
+
+.SeminarPhilosophy-program-link img {
+    margin-top: 20px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: all 0.4s;
+}
+
+.SeminarPhilosophy-program-link img:hover {
+    opacity: 1;
+}
+
 
 .SeminarPhilosophy-program-leftbar {
     grid-area: pleft;

@@ -101,15 +101,23 @@ class SeminarPhilosophy extends Component {
     );
   }
 
+  renderProgramLink() {
+    return '<div className="linkedPdf">verlinktes Pdf</div>';
+  }
+
 
   renderProgram () {
     let description = this.state.TEXT.__('SeminarPhilosophy');
+
+    let image = './resources/pdf.svg';
 
     return (
       <div className="SeminarPhilosophy-program-container">
         <div className="SeminarPhilosophy-program-header">Programm</div>
         
         <div className="SeminarPhilosophy-program-content">{ description }</div>
+
+        <div title={ this.state.TEXT.__('programPDF')} className="SeminarPhilosophy-program-link"><img src={image} /></div>
 
         <div className="SeminarPhilosophy-program-bar" />
       </div>

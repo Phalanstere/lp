@@ -279,7 +279,8 @@ i18n.configure({
 
 
             "SeminarPhilosophy": SeminarPhilosophy_EN,
-            "Seminars": "Seminars"
+            "Seminars": "Seminars",
+            "programPDF": "Open program as *.pdf-document"
 
         },
         'de': {
@@ -414,7 +415,8 @@ i18n.configure({
             "SeminarStartup": SeminarStartup_DE,
 
             "SeminarPhilosophy": SeminarPhilosophy_DE,
-            "Seminars": "Seminare"
+            "Seminars": "Seminare",
+            "programPDF": "Öffne das Programm das *.pdf-Dokument"
 
         }
     },
