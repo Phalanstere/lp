@@ -101,6 +101,11 @@ class Polaroid extends Component {
 			polaroid = 'Polaroid polaroid-touched';
 		}
 
+
+		if ( this.props.onClick) {
+			polaroid += ' clickable-polaroid';
+		}
+
         // <img width={ this.state.width } height={ this.state.height } src= { this.props.image } />
 
         return(
