@@ -278,7 +278,8 @@ i18n.configure({
             "SeminarStartup": SeminarStartup_EN,
 
 
-            "SeminarPhilosophy": SeminarPhilosophy_EN
+            "SeminarPhilosophy": SeminarPhilosophy_EN,
+            "Seminars": "Seminars"
 
         },
         'de': {
@@ -412,7 +413,8 @@ i18n.configure({
             "SeminarProgram": "Das Programm",
             "SeminarStartup": SeminarStartup_DE,
 
-            "SeminarPhilosophy": SeminarPhilosophy_DE
+            "SeminarPhilosophy": SeminarPhilosophy_DE,
+            "Seminars": "Seminare"
 
         }
     },

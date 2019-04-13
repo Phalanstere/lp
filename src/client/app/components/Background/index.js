@@ -31,7 +31,8 @@ class Background extends Component {
 			foregroundImage: props.images[1],
 			foregroundRatio: 1.777,
 			backgroundRatio: 1.777,
-			counter: 0
+			counter: 0,
+			initialized: false
 		};
 
 		this.id = this.createID();
@@ -78,11 +79,27 @@ class Background extends Component {
 		});
 	}
 
+
+	initialize(image) {
+		var self = this;
+		image.onload = function loadImage() {
+			let ratio = image.width / image.height;
+			self.setState({
+				initialized: true,
+				foregroundRatio: ratio
+			});
+		};
+	}
+
 	preload() {
 		for ( let i = 0; i < this.props.images.length; i++ ) {
 			const img = new Image();
 			img.src = this.props.images[ i ];
 			this.imageList.push( img );
+			if (i === 0) {
+				this.initialize(img);
+			}
+
 		}
 	}
 
@@ -233,6 +250,8 @@ class Background extends Component {
 		if ( this.state.fading === false) {
 			if (this.start === true) {
 				this.start = false;
+				if (! this.state.initialized) return null;
+
 				return (
 					<div ref="myRef" id = { this.id }>{ this.startProcess() }</div>
 				);
