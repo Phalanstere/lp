@@ -201,15 +201,6 @@ class NavBar extends Component {
               <Link to='/Portal'>{ TEXT.__('NavPortalTitle') }</Link>
             </NavItem>
 
-
-            <NavDropdown eventKey={3} title= {  TEXT.__('Projects') }  id="basic-nav-dropdown">
-              <MenuItem eventKey={'Computerwelt'} href="#computerworld">{  TEXT.__('computerworld') }</MenuItem>
-                
-                <MenuItem divider />
-                <MenuItem onClick = { this.digital_survival } eventKey={'DIGITAL SURVIVAL'} >{  TEXT.__('Digital Survival Training') }</MenuItem>
-            </NavDropdown> 
-
-
           </Nav>
           
           <Nav pullRight>
