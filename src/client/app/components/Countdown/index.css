@@ -1,0 +1,14 @@
+.Countdown{
+
+    position: absolute;
+    font-size: 44px;
+    color: darkorange;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    margin: auto;
+    width: 30%;
+    text-align: center;
+
+
+}

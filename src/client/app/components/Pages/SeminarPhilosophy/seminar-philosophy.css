@@ -1,0 +1,207 @@
+:root {
+	--constructivist:  rgba(249, 66, 58, 1);
+
+}
+
+.SeminarPhilosophy {
+    position: absolute;
+    top: 51px;
+    left: 0;
+    height: calc(100% - 51px);
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    background: rgba(240,230,222, 0.92);
+
+}
+
+
+.SeminarPhilosophy-grid-container {
+	position: relative;
+	display: grid;
+	width: 51%;;
+	top: 20px;
+    margin: auto;
+    background: ivory;
+    color: darkslategray;
+    font-family: Oswald;
+	grid-template-columns: 49% 60px 49%;
+	grid-template-rows: 10vh 20vh 35vh 1vw;
+	overflow-x: hidden;
+    transform: rotate(-43deg);
+
+	grid-template-areas:
+		"leftSection leftSection rightSection"
+		"left middle right"
+		"downleft middle down"
+        "downleft bottom bottom"
+}
+
+
+
+.SeminarPhilosophy-title {
+    grid-area: leftSection;
+	line-height: 60px;
+    text-align: right;
+    font-size: 6.7vh;
+}
+
+.SeminarPhilosophy-middle {
+    grid-area: middle;
+    writing-mode: vertical-lr;
+    color: var(--constructivist);
+    font-size: 6.7vh;
+}
+
+.SeminarPhilosophy-right {
+    grid-area: rightSection;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.SeminarPhilosophy-bar {
+    grid-area: bottom;
+    background: var(--constructivist);
+}
+
+
+.SeminarPhilosophy-links {
+    grid-area: downleft;
+    font-size: 30px;
+}
+
+
+.SeminarPhilosophy-links li {
+    list-style: none;
+    border-top: 5px solid rgba(12, 12, 10, 0.8);
+    text-align: left;
+    padding: 2px 0;
+}
+
+
+.SeminarPhilosophy-links li:hover {
+    color: var(--constructivist);
+    cursor: pointer;
+}
+
+
+
+
+.SeminarPhilosophy-program-container {
+    display: grid;
+    position: absolute;
+    left: 65.5%;
+    top: 53px;
+    width: 30%;
+    height: 90%;
+    background: ivory;
+    box-shadow: 0 0 8px darkgrey;
+    transform: rotate(8deg);
+    font-family: Oswald;
+
+    grid-template-columns: 8% 42% 45% 5%;
+	grid-template-rows: 6vw auto 16px;
+
+    grid-template-areas:
+        "pleft pheader pheader pright"
+        "pleft pcontent pcontent pright"
+        "pleft programbar programbar programbar"
+
+}
+
+.SeminarPhilosophy-program-header {
+    grid-area: pheader;
+    text-align: right;
+    font-size: 3.6vw;
+    color: var(--constructivist);
+}
+
+
+.SeminarPhilosophy-program-content {
+    grid-area: pcontent;
+    font-size: 16px;
+    text-align: justify;
+    font-family: Open Sans;
+    padding-right: 16px;
+    padding-top: 20%;
+}
+
+.SeminarPhilosophy-program-leftbar {
+    grid-area: pleft;
+    background: black;
+}
+
+
+.SeminarPhilosophy-program-bar {
+    grid-area: programbar;
+    background: var(--constructivist);
+}
+
+
+
+
+.SeminarPhilosophy-leader-container {
+    display: grid;
+    position: absolute;
+    left: 3%;
+    top: 120px;
+    width: 27%;
+    height: 80%;
+    background: ivory;
+    box-shadow: 0 0 8px darkgrey;
+    transform: rotate(-17deg);
+    font-family: Oswald;
+
+    grid-template-columns: 16px 90px auto 60px;
+	grid-template-rows: 4vw 120px auto 16px;
+
+    grid-template-areas:
+        "lleft lheader lheader lheader"
+        "lleft limage void void"
+        "lright none locus lcontent"
+        "nobasis nobasis basis nova"
+}
+
+
+
+.SeminarPhilosophy-leader-title {
+    grid-area: lheader;
+    text-align: right;
+    font-size: 3.2vw;
+    margin-right: 30px;
+    color: darkslategray
+}
+
+
+.SeminarPhilosophy-leader-person {
+    grid-area: lright;
+    text-align: center;
+    margin-right: 30px;
+    font-size: 50px;
+    color: var(--constructivist);
+    writing-mode: vertical-lr;
+}
+
+.SeminarPhilosophy-leader-image {
+    grid-area: limage;
+    background-size: 100% auto;
+    background-blend-mode: color-dodge;
+    filter: contrast(150%);
+}
+
+.SeminarPhilosophy-leader-content {
+    grid-area: locus;
+    margin-top: 30%;
+    font-family: Open Sans;
+}
+
+.SeminarPhilosophy-leader-bar {
+    grid-area: lleft;
+    background: var(--constructivist);
+}
+
+
+.SeminarPhilosophy-leader-basis {
+    grid-area: basis;
+    background: var(--constructivist);
+}

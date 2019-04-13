@@ -1,0 +1,27 @@
+.navbar-header {
+font-family: OpenSans;
+}
+
+.navbar {
+  font-family: 'Open Sans' sans-serif;
+  font-weight: 600;
+}
+
+
+.navbar-header a:link 
+  {
+  color:purple;
+  text-decoration: none;  
+  }
+.navbar-header a:visited 
+  {color:silver;
+  }
+.navbar-header a:hover {
+  color: red;
+  text-decoration: none;
+  }
+
+.navbar-header a {
+    color: green;
+}
+

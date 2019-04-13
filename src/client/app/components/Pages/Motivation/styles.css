@@ -1,0 +1,26 @@
+.painpoint
+{
+    padding-right: 20px;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;  
+    text-align: justify;  
+    -webkit-column-gap: 3vw;
+    -moz-column-gap: 3vw;
+    column-gap: 3vw;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+
+}
+
+
+.hyphenate
+{
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto;
+}

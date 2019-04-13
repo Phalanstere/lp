@@ -1,0 +1,56 @@
+.Services {
+    position: absolute;
+    left: 0;
+    top: 51px;
+    width: 100%;
+    height: calc(100% - 51px);
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.newsbar {
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4.2vw;
+    width: 100%;
+}
+
+.serviceText {
+    position: absolute;
+    background: white;
+    left: 20px;
+    width: 600px;
+    height: quto;
+    top: 15%;
+    box-shadow: 0 0 3px white;
+    font-size: 20px;
+    padding: 15px;
+    font-family: Palatino;
+    transition: all 1s;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: complex .9s ease-out forwards;
+}
+
+
+.serviceText:hover {
+    box-shadow: 0 0 25px white;
+}
+
+
+
+@-webkit-keyframes complex {
+	0% {
+		opacity: 0.3;
+        color: white;
+        filter: saturation(20%);
+	}
+
+	100% {
+		opacity: 1;
+        color: darkslategrey;
+        filter: saturation(100%);
+	}
+}

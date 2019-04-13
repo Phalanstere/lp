@@ -1,0 +1,11 @@
+.PdfViewer
+{
+position: absolute;
+top: 52;
+left: 0;
+right: 0;
+margin: auto;
+width: auto;
+height: 1080;
+height: auto;  
+}

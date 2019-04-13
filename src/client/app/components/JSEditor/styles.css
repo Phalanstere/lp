@@ -1,0 +1,74 @@
+.AcePage
+{
+position: absolute;
+left: 1%;
+top: 2%;
+height: 96%;
+width: 98%;
+background: darkcyan;
+z-index: 50;
+overflow: hidden;
+}
+
+.AceContainer
+{
+position: absolute;
+left: 20%;
+width: 60%;
+height: 60%;
+top: 6%;
+box-shadow: 1px 1px 1px darkgray;   
+}
+
+
+#MyEditor
+{
+line-height: 22px;
+backgroundColor: rgb(240,240,255);    
+z-index:2;
+}
+
+
+
+.MyConsole {
+  font-family: monospace;
+  width: 100%;
+  margin-top: 20px;
+  height: 28%;
+  overflow-y: scroll;
+  box-shadow: 1px 1px 1px darkgray;  
+  border:solid 1px silver;
+  background: ivory;
+
+}
+
+.InnerConsole
+{
+margin-left: 2%;
+width: 94%;
+margin-top: 10px;
+margin-bottom: 10px;  
+color: rgb(64,64,64);
+}
+
+.ace_log {
+  position: relative;
+  color: darkslategray;
+}
+
+.ace_error {
+    position: relative;
+  color: red;
+}
+
+
+.ace_warning {
+    position: relative;
+  color: darkorange;
+}
+
+
+.ace_info {
+    position: relative;
+  color: darkcyan;
+}

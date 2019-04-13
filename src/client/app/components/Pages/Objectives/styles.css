@@ -1,0 +1,89 @@
+.Objectives
+{
+position: absolute;
+top: 52px;
+left: 0;
+width: 100%;
+height: 90%;  
+font-size: 3vw;
+overflow: hidden;
+}
+
+
+.Objectives img
+{
+width: 100%;
+height: auto;   
+}
+
+.Ziele
+{
+position: absolute;
+width: 50%;
+min-width: 600px;
+min-height: 400px;
+height: 80%;
+padding: 30px;
+top: 10%;
+left: 0;
+right: 0;
+margin: auto;
+color: rgb(64,64,64);   
+background: rgba(255,255,255, 0.3);
+}
+
+.Atomic {
+    opacity: 0;
+}
+
+
+.bubble {
+    position: absolute;
+    left: -900px;
+    top: 100px;
+    height: 80px;
+    width: auto;
+    font-size: 1vw;
+    
+}
+
+
+#textholder
+{
+position: absolute;
+left: 0;
+right: 0;
+top: 20%;
+width: 60%;
+height: 50%;
+margin: auto;
+font-size: 2vw;
+color: black;
+white-space: pre-wrap;
+}
+
+#quote
+{
+white-space: pre-wrap;
+position: absolute;
+width: 200%;
+margin: auto;
+left: -50%;
+right: 0;
+text-align: center;
+font-size: 18px;
+opacity: 0.2;
+text-align: center;    
+margin-bottom: 40px;
+}
+
+
+#Machinery
+{
+padding-left: -20px;
+font-size: 3vw;
+line-height: 4vw;
+text-align: left;
+color: red;
+font-family: 'Open Sans' sans-serif;
+}

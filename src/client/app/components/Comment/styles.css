@@ -1,0 +1,67 @@
+._ExternalComment
+{
+position: relative;
+height: auto;
+float: left;
+width: 100%;
+background: white;
+box-shadow: 2px 2px darkgray;
+font-family: monospace;
+overflow: hidden;
+font-size: 14px;
+}
+
+._Comment
+{
+margin-top: 4px;
+height: auto;
+margin-left: 20px;
+font-size: 14px;
+padding-bottom: 4px;
+}
+
+.MyEditor
+{
+border: '1px solid #ccc';
+cursor: 'text';
+minHeight: 80;
+padding: 10;
+background: ivory;
+}
+
+
+._CommentPlaceholder
+{
+z-index: 1000;   
+background: white;
+width: 24px;
+height: 24px; 
+float: left;
+margin-right: 20px;
+}
+
+
+._NoteToolbar
+{
+position: fixed;
+left: 10px;
+top: 50px;
+width: auto;
+height: auto;
+background: white;  
+z-index: 1000;  
+font-family: monospace;
+font-size: 12px;
+box-shadow: 2px 2px 2px 2px darkgrey;
+}
+
+
+.underline
+{
+text-decoration: underline;    
+}
+
+.strikethrough
+{
+text-decoration: line-through;    
+}

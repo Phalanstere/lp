@@ -1,0 +1,56 @@
+.ElegantClock
+{
+}
+
+.digit
+{
+position: relative;    
+background-color: black;   
+color: silver;
+text-align: center; 
+margin-left: 10px;
+height: 80px;
+width: 48px;
+}
+
+.itemcontainer
+{
+ position: absolute;
+ left: 0;
+ top: 0;
+ height: 72px;
+ width: 48px;
+ font-size: 68px;
+ overflow: hidden;
+ float: left;  
+ color: silver; 
+ background-color: black;      
+}
+
+.item{
+ position: absolute;
+ left: 0;
+ top: 0;
+ height: 160px;
+ width: 48px;
+ text-align: center;
+ font-size: 68px;
+ float: left;  
+ color: silver; 
+ background-color: black;   
+
+}
+
+
+
+.Note
+{
+background: cyan;
+z-index: 100;
+width: 200px;    
+}
+
+.notification
+{
+font-family: Open Sans;    
+}

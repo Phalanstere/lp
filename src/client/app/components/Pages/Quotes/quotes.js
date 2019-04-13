@@ -1,0 +1,8 @@
+module.exports = [
+"In the beginning was the Zero, and the Zero was with God, and God was the One. The Zero and the One were with God in the Beginning. Through them all things were made; without them nothing was made that has been made.",
+"It is well known that the best way to hide a secret is to place it in plain view. Accordingly, our contemporary society of information, which measures everything in bits and bytes, remains blind to the meaning and origin of its own concept of information.  The situation resembles that of money: it is simply taken as something given.",
+"Anything that can be electrified can yield a script.  In this regard, the image associated with the formula x = xn goes back to 1746: in northern France, six hundred monks formed an immense circle on a field, connected themselves with a wire, and went into collective seizures when one of them touched a battery — or, more precisely, the newly discovered Leyden jar.",
+"If the Greeks, with their alphabet, paved the way for the theology of logos, medieval Europe retooled the Christian God as a clockmaker.  Since the computer represents a universal machine — like the alphabet and clockwork — it’s no wonder that the computer pioneer Charles Babbage tried his hand, before anything else, at a proof of the existence of God meant to replace the idea of a mechanical demiurge.",
+"What elevates God-the-Programmer over God-the-Clockmaker lies in this capacity for program change.  In other words: God is a DJ.",
+"The programmer no longer portrays the world; instead, he intervenes in the world.  The x is no longer a written sign detached from what it signifies, but an electronic formation that uncannily twins what it denotes.",
+]

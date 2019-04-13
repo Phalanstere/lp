@@ -1,0 +1,477 @@
+.SeminarPage {
+    position: absolute;
+    top: 51px;
+    width: 100%;
+    height: calc(100% - 51px);
+    animation: fade-in .5;
+    display: grid;
+
+    overflow: hidden;
+
+    font-family: Palatino;
+    font-size: 1vw;
+    line-height: 1.5;
+
+    grid-template-columns: 20px 20vw auto 20px;
+	  grid-template-rows: 6vw 12vw auto 20px;
+
+    grid-template-areas:
+		"left titling titling titling"
+		"left video body right"
+    "left empty body right"
+    "low low low  right"
+}
+
+.movingSeminarTitle {
+    grid-area: titling;
+    font-family: Oswald;
+    font-size: calc(20px + 2.5vw);
+    color: white;
+    vertical-align: text-top;
+    animation:  slide-in-right 1s;
+    z-index: 20;   
+}
+
+
+.SeminarPageVideo {
+    grid-area: video;
+    cursor: pointer;
+}
+
+.OverlayVideoScreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.92);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2001;
+}
+
+.OverlayVideo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1280px;
+    height: 720px;
+    background: black;
+    box-shadow: 0 0 40px black;
+}
+
+
+.SeminarPageBody {
+    grid-area: body;
+    display: grid;
+    height: 100%;
+    overflow-y: auto;
+
+    grid-template-columns:  1fr 1fr 30%;
+	  grid-template-rows: 1fr 1fr 1fr;
+
+  grid-template-areas:
+		"left middle right"
+		"left middle right"
+    "left middle right"
+}
+
+.SeminarExplanation {
+    grid-area: right;
+    background: white;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.SeminarDescription {
+    grid-area: middle;
+    background: white;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: solid 1px black;
+}
+
+
+.SeminarImages {
+  grid-area:left;
+  background: gold;
+}
+
+.SeminarImages img {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border:solid 2px black;
+}
+
+
+
+/************************************** Ende SeminarPage Grip *************************/
+
+
+.SeminarInfo {
+    position: absolute;
+    top: 51px;
+    width: 100%;
+    height: calc(100% - 51px);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.Seminar {
+    position: absolute;
+    top: 51px;
+    width: 100%;
+    height: calc(100% - 51px);
+    background: black;
+}
+
+
+.InfoText {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 80px;
+    width: 70%;
+    height: 100%;
+    background: white;
+    font-size: 22px;
+    font-family: Cormorant Garamond;
+    overflow-y: auto;
+}
+
+
+.InfoTextContainer {
+    position: absolute;
+    left: 20px;
+    top: 15%;
+    width: 400px;
+    height: 60%;
+    border-radius: 8px;
+   background: rgba(255,255,255,1);
+}
+
+.InfoTextHeader {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    border:inset 2px black;
+}
+
+
+.InfoTextBody {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0px;
+    z-index: 4;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+/**************************************************/
+
+.dataProtect {
+  position: absolute;
+  right: 20px;
+  width: 25%;
+  height: 75%;
+  top: 7.5%;
+  padding: 20px;
+  padding-right: 0;
+  border-radius: 8px;
+  background: white;
+  overflow: hidden;
+}
+
+
+.dataProtectInterior {
+    position: relative;
+    height: 95%;
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+    font-size: calc(10px + 0.2vw);
+    line-height: 1.4;
+    opacity: 1;
+    width: 100%;
+    padding: 20;
+    padding-bottom: 2vw;
+    color: darkslategrey;
+    overflow-y: auto;
+    font-family: Open Sans;
+    background: white;
+}
+
+
+
+
+
+.movingTitle {
+    font-family: Oswald;
+    font-size: 80px;
+    color: white;
+    margin-left: 50px;
+    text-shadow: 0 900px 500px darkgray;
+    animation:  slide-in-right 1s;
+    z-index: 20;
+}
+
+
+.YouTubeVideoContainer {
+    width: 100%;
+    height: 315px;
+    background-color: black;
+    z-index: 5;
+}
+
+.YouTubeVideo {
+    position: absolute;
+    top: 150px;
+    width: 560px;
+    height: 315px;
+    left: 50px;
+    right: 0;
+}
+
+.videoOverlay {
+    position: absolute;
+    top: 0;
+    width: 560px;
+    height: 315px;
+    left: 0;
+    z-index: 2;
+    background: white;
+}
+
+
+
+
+
+.Expandable {
+}
+
+.Expandable p {
+    line-height: 130%;
+}
+
+
+.ExpandableTitle {
+    font-family: Oswald;
+    font-size: 22px;
+    color: darkred;
+    animation: fade-in 1.5s;
+    cursor: pointer;
+}
+
+.ExpandableBody {
+    margin-top: 10px;
+    color: darkslategray;
+    font-size: calc(10px + 0.5vw);
+    line-height: 130%;
+    animation: swing-in-top-fwd .5s;
+    font-family: Palatino;
+    height: auto;
+    margin-bottom: 0.5vw;
+}
+
+.active {
+  color: red;
+}
+
+.ExpandableBodyOut {
+    display: none;
+}
+
+.SlidingDiv {
+    background: cyan;
+}
+
+/**
+ * ----------------------------------------
+ * animation swing-in-top-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-3-22 12:4:46
+ * w: http://animista.net; t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation flip-in-hor-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+            transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+            transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-3-22 12:23:27
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-out-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-3-22 12:35:3
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-blur-out
+ * ----------------------------------------
+ */
+@-webkit-keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+            filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+    
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+            filter: blur(12px) opacity(0%);
+  }
+}
+    
+/* ----------------------------------------------
+ * Generated by Animista on 2019-3-22 16:29:11
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}

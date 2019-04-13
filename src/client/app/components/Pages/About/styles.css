@@ -1,0 +1,45 @@
+.PdfViewer
+{
+position: absolute;
+top: 52;
+left: 0;
+width: auto;
+height: 1080;
+height: auto;   
+}
+
+
+.leftArrow
+{
+position: fixed;
+height: 100%;
+left: 0.5%;
+width: 100px;
+padding-left: 2%;
+}
+
+.rightArrow
+{
+position: fixed;
+height: 100%;
+width: 60px;
+right: 0;
+text-align: right;
+z-index: 2;
+}
+
+
+.arrow {
+position: absolute;
+top: 49%;
+left: 0;
+font-size: 4vw;
+height: auto;
+font-family: monspace;
+font-weight: 800;
+cursor: pointer;
+}
+
+.arrow:hover {
+color: red;
+}

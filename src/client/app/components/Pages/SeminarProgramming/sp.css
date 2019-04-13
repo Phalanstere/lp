@@ -1,0 +1,88 @@
+.SeminarProgramming {
+    position: absolute;
+    width: 56%;
+    height: 80%;
+    left: 45%;
+    right: 0;
+    top: 15%;
+    margin: auto;
+
+}
+
+.SeminarProgrammierungLeft {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    left: 5%;
+    top: 65%;
+    transform: skew(12deg, 12deg);
+    font-size: 2vw;
+    font-family: Oswald;
+    font-weight: 800;
+    float: right;
+    color: white;    
+}
+
+.SeminarProgrammierungItem {
+    border-top: 3px solid rgba(255, 255, 255, 0.5);
+    text-align: left;
+    padding: 2px 0;
+}
+
+
+.SeminarProgrammierungItem:hover {
+    border-top: 3px solid rgba(255, 0, 0, 1);
+    color: red;
+    cursor: pointer;
+}
+
+
+
+.SeminarProgrammierungLeader {
+    position: absolute;
+    background: black;
+    top: 10%;
+    height: 80%;;
+    min-width: 400px;
+    width: 25%;
+    right: 2%;
+    border-radius: 16px;
+    /* box-shadow: 0 0 30px 3px white, 0 0 10px darkgrey; */
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px gainsboro, 0 0 40px gainsboro, 0 0 50px ivory, 0 0 80px #e60073, 0 0 110px white;
+}
+
+.SeminarProgrammierungPortrait {
+    position: absolute;
+    top: 7%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: blue;
+}
+
+
+.SeminarProgrammierungPortrait img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.SeminarProgrammierungInfo {
+    position: absolute;
+    top: 380px;
+    color: red;
+    left: 10%;
+    width: 80%;
+    font-family: Oswald;
+    font-size: 20px;
+}
+
+.SeminarProgrammierungInfo .PersonInfo {
+    margin-top: 10px;
+    font-family: monospace;
+    color: white;
+    font-size: 14px;
+
+}

@@ -1,0 +1,200 @@
+import React, { Component } from 'react';
+import './style.css';
+
+
+
+const file = './app/resources/code.txt';
+
+
+
+
+class DynamicCode extends Component {
+
+ constructor(props) {
+   super(props);
+
+   var self = this;
+
+   this.state = {
+     codelines: [],
+     actual: [],
+     cnt: 0,
+     maxLines: 50,
+     interval: 40
+   }
+
+
+
+
+ }
+
+
+splitIntoLines(data) {
+  let splitted = data.split("\n");  
+  alert (splitted);
+
+}
+
+digestText() {
+    var self = this;
+
+    function readTextFile(file, callback) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function() {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+                console.log("eingelesen");
+                callback(rawFile.responseText);
+            }
+        }
+        rawFile.send(null);
+    }
+
+
+  readTextFile(file, function(text){
+    let splitted = text.split("\n");  
+    
+    for (var i = 0; i < splitted.length; i++) {
+      var s = splitted[i];
+      var temp = s.replace(/\t/g, '&emsp');
+      // var temp = s.replace(/\s+/g, '&nbsp;');
+      splitted[i] = temp;
+    }
+    
+    let code = splitted;
+    console.log("Länge des Arrays " + code.length)
+    
+    self.setState({
+      codelines: code
+			});
+    
+    
+    console.log(self);
+
+    self.startLoop();
+
+  });
+}
+
+
+
+
+
+loop() {
+  if (this.props.delay) console.log("MIT DELAY");
+  let no = this.state.cnt + 1;
+  let offset = 0;
+  if (no < this.state.codelines.length) {
+    if (no >= this.state.maxLines) {
+      offset = no - this.state.maxLines;  
+      }
+    let array = this.state.codelines.slice(0 + offset, no + offset);
+
+    this.setState({
+        cnt: no,
+        actual: array
+        });
+    }
+  else {
+      this.setState({
+        cnt: 0,
+        });
+  }
+
+}
+
+
+clearInterval() {
+  clearInterval(this.interval);
+}
+
+
+startDelayLoop() {
+    let iv = this.props.interval;
+    if ( ! iv) iv = this.state.interval;
+     this.interval = setInterval( this.loop.bind(this), iv);
+}
+
+setDuration() {
+  let offset = this.props.duration;
+  if (this.props.delay) offset += this.props.delay;
+
+
+  setTimeout( this.clearInterval.bind(this), offset );
+}
+
+
+startLoop() {
+  if ( this.props.duration) {
+    this.setDuration()
+  }
+
+  if (! this.props.delay)
+    {
+    let iv = this.props.interval;
+    if ( ! iv) iv = this.state.interval;
+ 
+    this.interval = setInterval( this.loop.bind(this), iv);
+  }
+  else
+    {
+    setTimeout( this.startDelayLoop.bind(this), this.props.delay  )
+    }
+}
+
+
+// Ermittlung der idealen Fontgröße
+componentDidMount() {
+  this.digestText();
+}
+
+returnLines() {
+  var style = 'coding';
+  let code = this.state.actual;
+
+  var temp = code.map((currElement, index) => {
+
+    let style = {
+      opacity: index*0.024
+    }
+
+
+    return <div style = { style} key = { index} className = { style}>{ currElement }</div>
+  });
+
+  // console.log(x);
+
+  return temp;
+}
+
+
+
+  render() {
+
+    let lines = this.returnLines();
+    let style = {
+      position: 'absolute',
+      fontFamily: 'monospace',
+      left: 20,
+      width: '40%',
+      color: 'darkcyan',
+      top: '2%',
+      height: '93%',
+      overflow: 'hidden'
+    }
+
+    let cn = this.props.className;
+    if (! cn ) cn = "leftcode";
+
+
+    let id = cn;
+
+
+    return (
+      <div className = { cn } id = "DynamicCode"> { lines } </div>
+    );
+  }
+}
+
+export default DynamicCode;
