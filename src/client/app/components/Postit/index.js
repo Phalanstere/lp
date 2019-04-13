@@ -82,8 +82,13 @@ class Postit extends Component {
         let style = this.checkTransforms();
         console.log(style);
 
+		let className="Postit";
+		if ( this.props.onClick ) {
+			className += ' postit-callback';
+		}
+
         return(
-            <div onClick={ this.trigger.bind(this) } style={ style } className="Postit">
+            <div onClick={ this.trigger.bind(this) } style={ style } className={ className }>
                <div className="PostitContent">
                   <div className="PostitTitle">
                       { this.props.title }

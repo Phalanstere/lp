@@ -56,3 +56,8 @@
 	background-image: url(https://isle.heinz.cmu.edu/Summertime_lp_kaffee2.png);
 	background-size: 200px 120px;
 }
+
+
+.postit-callback {
+    cursor: pointer;
+}
