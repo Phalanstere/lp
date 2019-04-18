@@ -40,7 +40,7 @@ class NewsStream extends Component {
           }}
           options={{
             username: this.state.userName,
-            height: '90%'
+            height: '100%'
           }}
           onLoad={() => console.log('Timeline is loaded!')}
         />
@@ -90,9 +90,15 @@ class NewsStream extends Component {
 
     return(
       <div className="BotOptions">
-          <div onClick={ this.triggerTwitterAccount.bind(this, 1) } key={1} className="BotOptionsChoice">{hr}</div>
-          <div onClick={ this.triggerTwitterAccount.bind(this, 3) } key={2} className="BotOptionsChoice">{blockchain}</div>
-          <div onClick={ this.triggerTwitterAccount.bind(this, 2) } key={3} className="BotOptionsChoice">{medicine}</div>
+          <div onClick={ this.triggerTwitterAccount.bind(this, 1) } key={1} className="BotOptionsChoice">
+            <img className="ns-icon" src = './resources/noun_people.svg' />
+            {hr}</div>
+          <div onClick={ this.triggerTwitterAccount.bind(this, 3) } key={2} className="BotOptionsChoice">
+            <img className="ns-icon" src = './resources/noun_bitcoin.svg' />
+            {blockchain}</div>
+          <div onClick={ this.triggerTwitterAccount.bind(this, 2) } key={3} className="BotOptionsChoice">
+            <img className="ns-icon" src = './resources/noun_medicine.svg' />
+            {medicine}</div>
       </div>
     );
   }
