@@ -10,7 +10,7 @@ import '../../../../resources/animations.css';
 
 import './news-stream.css';
 
-var tt = require('twitter-timeline');
+import { Timeline } from 'react-twitter-widgets'
 
 
 
@@ -21,15 +21,82 @@ class NewsStream extends Component {
 
    this.state = {
       TEXT: global.TEXT,
-      locale: this.props.language
+      locale: this.props.language,
+      screenName: 'high_fly2026',
+      userName: 'HighFrequency',
+      initalized: false
     }
  }
 
 
 
-
-  componentDidMount() {
+  renderTwitter(no) {
+    return(
+      <div className="TwitterStream">
+        <Timeline
+          dataSource={{
+            sourceType: 'profile',
+            screenName: this.state.screenName
+          }}
+          options={{
+            username: this.state.userName,
+            height: '90%'
+          }}
+          onLoad={() => console.log('Timeline is loaded!')}
+        />
+      </div>
+    );
   }
+
+  triggerTwitterAccount(key) {
+    let screenName;
+    let userName;
+
+    switch(key) {
+      case 0:
+        screenName = "DigitalSurviva1";
+        userName="DigitalSurvival";
+      break;
+
+      case 1:
+       screenName = "Personality2026";
+       userName="PersonalityHunter";
+      break;
+
+      case 2:
+        screenName = "doITnow91";
+        userName="JustDoIT";
+      break;
+
+      case 3:
+        screenName = "high_fly2026";
+        userName="HighFrequency";
+      break;
+    }
+
+    this.setState({
+      screenName: screenName,
+      userName: userName,
+      initalized: true
+    })
+  }
+
+
+  renderOptions() {
+    let hr =  this.state.TEXT.__('bot_hr');
+    let blockchain =  this.state.TEXT.__('bot_blockchain');
+    let medicine =  this.state.TEXT.__('bot_medicine');
+
+
+    return(
+      <div className="BotOptions">
+          <div onClick={ this.triggerTwitterAccount.bind(this, 1) } key={1} className="BotOptionsChoice">{hr}</div>
+          <div onClick={ this.triggerTwitterAccount.bind(this, 3) } key={2} className="BotOptionsChoice">{blockchain}</div>
+          <div onClick={ this.triggerTwitterAccount.bind(this, 2) } key={3} className="BotOptionsChoice">{medicine}</div>
+      </div>
+    );
+  }
+
 
   render() {
 
@@ -51,7 +118,9 @@ class NewsStream extends Component {
 
     return (
         <div className="NewsStream" > 
-            <div className="movingTitle">{movingTitle}</div> 
+            <div className="movingTitle">{movingTitle}</div>
+            { this.renderOptions() }
+            { this.state.initalized ? this.renderTwitter() : null } 
             <Background style={{ filter: 'sepia(20%)'}} images={ list } in='fade-in' out="fade-out" time={9}/>           
             <div className ="NewsStreamText">
               <p>{ns1}</p>

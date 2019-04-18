@@ -148,6 +148,16 @@ let NewsStream2_EN = 'In addition to this increased information content, the new
 let NewsStream3_EN = 'In case you are interested, please contact us.';
 
 
+let bot_hr_DE = 'Ein Bot, der hauptsächlich Nachrichten zu Human Resource Management postet';
+let bot_blockchain_DE = 'Ein Bot, der hauptsächlich Nachrichten zur Blockchain und zu Kryptowährungen postet';
+let bot_medicine_DE = 'Ein Bot, der hauptsächlich Nachrichten zu Fragen der Präzisionsmedizin postet';
+
+
+let bot_hr_EN = 'A bot that mainly posts messages about Human Resource Management';
+let bot_blockchain_EN = 'A bot that mainly posts messages about blockchain and crypto currencies.';
+let bot_medicine_EN = 'A bot that mainly posts news on precision medicine issues.';
+
+
 
 i18n.configure({
     locales: {
@@ -294,7 +304,11 @@ i18n.configure({
 
             "NewsStream1": NewsStream1_EN,
             "NewsStream2": NewsStream2_EN,
-            "NewsStream3": NewsStream3_EN
+            "NewsStream3": NewsStream3_EN,
+
+            "bot_hr": bot_hr_EN,
+            "bot_blockchain": bot_blockchain_EN,
+            "bot_medicine": bot_medicine_EN
 
         },
         'de': {
@@ -434,7 +448,11 @@ i18n.configure({
 
             "NewsStream1": NewsStream1_DE,
             "NewsStream2": NewsStream2_DE,
-            "NewsStream3": NewsStream3_DE
+            "NewsStream3": NewsStream3_DE,
+
+            "bot_hr": bot_hr_DE,
+            "bot_blockchain": bot_blockchain_DE,
+            "bot_medicine": bot_medicine_DE
 
         }
     },

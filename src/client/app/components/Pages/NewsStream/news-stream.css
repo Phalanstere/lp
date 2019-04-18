@@ -15,10 +15,54 @@
     top: 13%;
     font-size: calc(10px + 0.5vw);
     font-family: Palatino;
-    width: 500px;
+    width: 30%;
     max-width: 500px;
     height: auto;
     border-radius: 16px;
     padding: 25px;
     box-shadow: 0 2px 8px black;
+}
+
+
+.TwitterStream {
+    background: white;
+    position: absolute;
+    right: 5%;
+    top: 7%;
+    width: 30%;
+    max-width: 500px;
+    height: 80%;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px black;  
+    animation: fade-in 2s forwards;
+}
+
+
+.BotOptions {
+    background: white;
+    position: absolute;
+    left: 38%;
+    top: 27%;
+    margin: auto;
+    font-size: calc(10px + 0.5vw);
+    font-family: Palatino;
+    width: 20%;
+    height: 300px;
+    padding: 25;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px black;  
+}
+
+
+.BotOptionsChoice {
+    color: darkslategrey;
+    cursor: pointer;
+    transition: all .5s;
+    margin-bottom: 15px;
+    font-size: 15px;    
+}
+
+
+.BotOptionsChoice:hover {
+    color: red;
 }
