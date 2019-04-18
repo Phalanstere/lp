@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 
 import Background from  '../../../components/Background';
 import Ticker from  '../../../components/Ticker';
+import Seal from  '../../../components/Seal';
 import EmbeddedYouTube from  '../../../components/EmbeddedYouTube';
 
 import '../../../../resources/animations.css';
@@ -106,6 +107,10 @@ class SeminarPhilosophy extends Component {
   }
 
 
+  openPdf() {
+    window.open("./resources/lp_Seminar_Philosophie.pdf", '_blank');    
+  }
+
   renderProgram () {
     let description = this.state.TEXT.__('SeminarPhilosophy');
 
@@ -117,13 +122,36 @@ class SeminarPhilosophy extends Component {
         
         <div className="SeminarPhilosophy-program-content">{ description }</div>
 
-        <div title={ this.state.TEXT.__('programPDF')} className="SeminarPhilosophy-program-link"><img src={image} /></div>
+        <div onClick={ this.openPdf.bind(this) } title={ this.state.TEXT.__('programPDF')} className="SeminarPhilosophy-program-link"><img src={image} /></div>
 
         <div className="SeminarPhilosophy-program-bar" />
       </div>
     );
   }
 
+
+  renderSeal() {
+    return (
+          <Seal 
+          style={{fontFamily: 'Oswald', 
+          color: 'red',
+          float: 'left',
+          background: 'ivory',
+          transform: 'rotate(-30deg)',
+          cursor: 'pointer',
+          marginRight: 40,
+          marginBottom: 30}}
+          activationMode
+          upperArc={ 140 } 
+          lowerArc={150} 
+          lower=""          
+          title="Anmeldung" 
+          noOrnaments
+          scale={.66}
+          upper="Digitale Philosophie"
+      />
+    )
+  }
 
 
   render() {
@@ -149,7 +177,9 @@ class SeminarPhilosophy extends Component {
     let philosophy = this.state.TEXT.__('MovingTitlePhilosophy');
 
     return (
-        <div className="SeminarPhilosophy" > 
+        <div className="SeminarPhilosophy" >  
+            { this.renderSeal() }
+
             <div className="movingSeminarTitle">{ philosophy }</div>
             <Background style={{ filter: 'sepia(70%)'}} images={ list } in='fade-in' out="fade-out" time={6}/>
             { this.content() }

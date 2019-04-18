@@ -73,7 +73,7 @@ class SeminarsInfo extends Component {
   renderText() {
     let idea = this.state.TEXT.__('SeminarIdea');
     let format = this.state.TEXT.__('SeminarFormat');
-    let location = this.state.TEXT.__('SeminarLocation');
+    let location = this.state.TEXT.__('SeminarLocationInfo');
     let portal = this.state.TEXT.__('SeminarPortal');
 
     let SeminarOrigins = this.state.TEXT.__('SeminarOrigins');

@@ -137,7 +137,7 @@ class Services extends Component {
       "Von Büchern in den Zeiten des Internet",
       "Ihr Begleiter im Medienwandel",
       "Übersetzungen - roh oder elaboriert ",
-      "Von der Mansukript-Evaluierung bis zum Lektorat",
+      "Von der Manuskript-Evaluierung bis zum Lektorat",
       "Wie man mit einem Bot kommuniziert ..."
     ];
 

@@ -1,0 +1,24 @@
+.NewsStream {
+    position: absolute;
+    left: 0;
+    top: 51px;
+    width: 100%;
+    height: calc(100% - 51px);
+    overflow: hidden;
+}
+
+
+.NewsStreamText {
+    background: white;
+    position: absolute;
+    left: 50px;
+    top: 13%;
+    font-size: calc(10px + 0.5vw);
+    font-family: Palatino;
+    width: 500px;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 2px 8px black;
+}

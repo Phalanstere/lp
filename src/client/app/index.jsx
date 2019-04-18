@@ -45,6 +45,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 
+import NewsStream from './components/Pages/NewsStream';
+
+
+
 
 // import reducer from './reducers';
 
@@ -178,6 +182,8 @@ ReactDOM.render((
                 <Route path="/SeminarsInfo" render={()=><SeminarsInfo/>}/>
                 <Route path="/Portal" render={()=><Portal/>}/>
 
+
+                <Route path="/NewsStream" render={()=><NewsStream />}/>
 
 
                 <Route path="/intro" render={()=><News/>}/>

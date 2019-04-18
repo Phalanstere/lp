@@ -8,6 +8,9 @@ import Background from  '../../../components/Background';
 import ShapedForm from  '../../../components/ShapedForm';
 import Typewriter from  '../../../components/Typewriter';
 
+import Seal from  '../../../components/Seal';
+
+
 import Expandable from  '../../../components/Expandable';
 import renderHTML from 'react-render-html';
 
@@ -94,6 +97,81 @@ class SeminarProgramming extends Component {
   }
 
 
+  renderSeal() {
+    return (
+          <div>
+
+          <Seal 
+          style={{fontFamily: 'Oswald', 
+          position: 'absolute',
+          left: 20,
+          top: 120,
+          color: 'white',
+          float: 'left',
+          background: 'linear-gradient(to right, silver, darkslategray, black, silver)',
+          transform: 'rotate(-30deg)',
+          cursor: 'pointer',
+          marginRight: 40,
+          boxShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px gainsboro, 0 0 20px gainsboro, 0 0 25px ivory, 0 0 40px #e60073, 0 0 55px white',
+          marginBottom: 30}}
+
+          innerStyle={{
+            backgroundImage: 'url(./resources/lp_code01.jpg)',
+            backgroundSize: 'auto 100%'
+          }}
+
+          activationMode
+          upperArc={ 70 } 
+          lowerArc={70} 
+          title="13.-14.9.2019"          
+          lower="Anmeldung" 
+          noOrnaments
+          scale={.72}
+          upper="Hamburg"
+          onClick={() => {
+            window.open('https://www.nithh.de/de/thinktank/denke-der-it-ler-verstehen/', '_blank');
+          }}
+      />
+
+      <Seal 
+          style={{fontFamily: 'Oswald', 
+          position: 'absolute',
+          left: 260,
+          top: 140,
+          color: 'white',
+          float: 'left',
+          background: 'linear-gradient(to right, silver, darkslategray, black, silver)',
+          transform: 'rotate(9deg)',
+          cursor: 'pointer',
+          marginRight: 40,
+          boxShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px gainsboro, 0 0 20px gainsboro, 0 0 25px ivory, 0 0 40px #e60073, 0 0 55px white',
+          marginBottom: 30}}
+
+          innerStyle={{
+            backgroundImage: 'url(./resources/lp_code01.jpg)',
+            backgroundSize: 'auto 100%'
+          }}
+
+          activationMode
+          upperArc={ 70 } 
+          lowerArc={70} 
+          title="21.-22.5.2019"          
+          lower="Anmeldung" 
+          noOrnaments
+          scale={.8}
+          upper="Hamburg"
+          onClick={() => {
+            window.open('https://www.nithh.de/de/thinktank/denke-der-it-ler-verstehen/', '_blank');
+          }}
+      />
+
+      </div>
+
+    )
+
+  }
+
+
   renderProgram() {
     return(
       <div className="SeminarProgrammierungLeader">
@@ -166,6 +244,7 @@ class SeminarProgramming extends Component {
 
     return (
         <div className="SeminarPage" > 
+            { this.renderSeal() }
             <div className="movingSeminarTitle">{ thinking }</div>
             { this.renderDescription() }
             { this.state.videoStart ? <EmbeddedYouTube key={key} auto link="E_xTU4l-eVM" /> : null }

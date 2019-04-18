@@ -139,6 +139,16 @@ let SeminarPhilosophy_EN = "From the very beginning the computer world has been 
 
 
 
+let NewsStream1_DE = 'Der News-Stream ist eine Bot-Architektur, die das Internet eigenständig nach bestimmten, überaus speziellen Fragestellungen durchsucht und einen steten Strom von Nachrichten produziert. Die Technik ist bei verschiedenen Twitter-Bots zum Einsatz gekommen, die ihrerseits als Spender  genuin neuer Nachrichten von der Twitter-Gemeinde goutiert worden sind – und Tausende von Followern generiert haben. Der Mehrwert besteht jedoch nicht in dieser Gefolgschaft, sondern in der Qualität der Nachrichten. Will man sich über aktuelle Trends in bestimmten Teilbereichen informieren (etwa über die letzten Entwicklungen der Präzisionsmedizin), sind Blogs, Ingroup- und Expertenbeiträge weit informativer als das, was man in den Zeitungen zu lesen bekommt.';
+let NewsStream2_DE = 'Neben diesem erhöhten Informationsgehalt versieht der News-Stream eine Webseite mit einer Öffnung in die Welt – und erhöhte auf diese Weise auch die Attraktivität Ihrer Internetpräsenz.';
+let NewsStream3_DE = 'Wenn Sie Bedarf an einer solchen Technologie haben, sprechen Sie uns an.';
+
+let NewsStream1_EN = 'The news stream is a bot architecture that independently searches the Internet for specific, highly specific questions and produces a constant stream of news. The technology has been used in a number of Twitter bots, which in turn have been appreciated as donors of genuinely new messages by the Twitter community - and have generated thousands of followers. The added value, however, is not in this following, but in the quality of the news. If you want to find out about current trends in certain areas (such as the latest developments in precision medicine), blogs, ingroup and expert articles are far more informative than what you read in the newspapers.';
+let NewsStream2_EN = 'In addition to this increased information content, the news stream provides a website with an opening into the world - and in this way also increased the attractiveness of your Internet presence.';
+let NewsStream3_EN = 'In case you are interested, please contact us.';
+
+
+
 i18n.configure({
     locales: {
         'en': {
@@ -248,7 +258,7 @@ i18n.configure({
 
 
             "SeminarFormat": SeminarFormat_EN,
-            "SeminarLocation": SeminarLocation_EN,
+            "SeminarLocationInfo": SeminarLocation_EN,
             "SeminarPortal": SeminarPortal_EN,
             "SeminarOrigins": "The Origins",
             "SeminarHow": "How and Where",
@@ -280,7 +290,11 @@ i18n.configure({
 
             "SeminarPhilosophy": SeminarPhilosophy_EN,
             "Seminars": "Seminars",
-            "programPDF": "Open program as *.pdf-document"
+            "programPDF": "Open program as *.pdf-document",
+
+            "NewsStream1": NewsStream1_EN,
+            "NewsStream2": NewsStream2_EN,
+            "NewsStream3": NewsStream3_EN
 
         },
         'de': {
@@ -386,7 +400,7 @@ i18n.configure({
             "ServicesConsultingTitle": "Digital-Beratung",
 
             "SeminarFormat": SeminarFormat_DE,
-            "SeminarLocation": SeminarLocation_DE,
+            "SeminarLocationInfo": SeminarLocation_DE,
             "SeminarPortal": SeminarPortal_DE,
 
             "SeminarOrigins": "Vorgeschichte",
@@ -416,7 +430,11 @@ i18n.configure({
 
             "SeminarPhilosophy": SeminarPhilosophy_DE,
             "Seminars": "Seminare",
-            "programPDF": "Öffne das Programm das *.pdf-Dokument"
+            "programPDF": "Öffne das Programm das *.pdf-Dokument",
+
+            "NewsStream1": NewsStream1_DE,
+            "NewsStream2": NewsStream2_DE,
+            "NewsStream3": NewsStream3_DE
 
         }
     },

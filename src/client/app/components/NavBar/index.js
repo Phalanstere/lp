@@ -201,6 +201,11 @@ class NavBar extends Component {
               <Link to='/Portal'>{ TEXT.__('NavPortalTitle') }</Link>
             </NavItem>
 
+            <NavDropdown eventKey={8} title= { TEXT.__n('Projekte') } id="basic-nav-dropdown">
+              <MenuItem eventKey={'NewsStream'} href="#NewsStream">{ TEXT.__('NewsStream') }</MenuItem>
+            </NavDropdown>
+
+
           </Nav>
           
           <Nav pullRight>

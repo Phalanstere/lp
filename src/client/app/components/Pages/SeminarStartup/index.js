@@ -9,6 +9,9 @@ import Background from  '../../../components/Background';
 import Ticker from  '../../../components/Ticker';
 import Typewriter from  '../../../components/Typewriter';
 
+import Seal from  '../../../components/Seal';
+
+
 import Polaroid from  '../../../components/Polaroid';
 import Postit from  '../../../components/Postit';
 import PopupPage from  '../../../components/PopupPage';
@@ -219,6 +222,44 @@ class SeminarStartup extends Component {
   }
 
 
+  renderSeal() {
+    return (
+          <Seal 
+          style={{fontFamily: 'Oswald', 
+          position: 'absolute',
+          left: '52%',
+          top: 10,
+          color: 'white',
+          float: 'left',
+          background: 'linear-gradient(to right, silver, darkslategray, black, silver)',
+          transform: 'rotate(30deg)',
+          cursor: 'pointer',
+          marginRight: 40,
+          boxShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px gainsboro, 0 0 20px gainsboro, 0 0 25px ivory, 0 0 40px silver, 0 0 55px white',
+          marginBottom: 30}}
+
+          innerStyle={{
+            backgroundImage: 'url(./resources/lp_code01.jpg)',
+            backgroundSize: 'auto 100%'
+          }}
+
+          activationMode
+          upperArc={ 120 } 
+          lowerArc={70} 
+          title="Anmeldung"          
+          lower="Anmeldung" 
+          noOrnaments
+          scale={.82}
+          upper="Berlin, 13.-15. Juni"
+          onClick={() => {
+            window.open('https://www.ludeo.de/ludeo-akademie/digital-survival-lab-start-up-yourself/', '_blank');
+          }}
+      />
+    )
+
+  }
+
+
   triggerProgram() {
     this.setState({
       program: true
@@ -261,6 +302,8 @@ class SeminarStartup extends Component {
             <div className="postcard">
               <Background time={8} inTime={1.7} images={tango} />
             </div>
+
+            { this.renderSeal() }
 
 
             <Polaroid showPin onClick={ this.callback.bind(this) } 
